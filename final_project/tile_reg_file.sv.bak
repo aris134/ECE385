@@ -1,0 +1,7 @@
+module tile_reg_file (input Clk, Reset, LoadUB, LoadLB,
+							 input [7:0] Attr0, Attr1, Attr2, Attr3, Attr4, Attr5, Attr6, Attr7,
+							 input [1:0] Palette0, Palette1, Palette2, Palette3, Palette4, Palette5, Palette6, Palette7,
+							 input [2:0] select,
+							 input [7:0] Data_in,
+							 output [4:0] Data_out,
+							 output BGselect);

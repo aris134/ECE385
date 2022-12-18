@@ -1,0 +1,8 @@
+module SystemPalette (input              clk,
+							 input        [7:0] in ,
+							 output logic [7:0] out );
+
+	// This module will be synthesized into a RAM
+    always @ (posedge clk)
+    case (in)
+	   8'h00: out <= 8'h63;

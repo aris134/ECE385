@@ -1,0 +1,13 @@
+module flip_flop (input logic Clk,
+						input logic Reset,
+						input logic D,
+						output logic Q);
+						
+		always_ff @ (posedge Clk)
+		begin
+			if (Reset)
+				Q <= 1'b0;
+			else
+				Q <= D;
+		end
+endmodule

@@ -1,0 +1,36 @@
+Info (10281): Verilog HDL Declaration information at flip_flop.sv(2): object "Q" differs only in case from object "q" in the same scope
+Warning (10268): Verilog HDL information at register_file.sv(109): always construct contains both blocking and non-blocking assignments
+Info (10281): Verilog HDL Declaration information at register_file.sv(6): object "WT_clear" differs only in case from object "wt_clear" in the same scope
+Info (10281): Verilog HDL Declaration information at register_file.sv(5): object "OAMAddr" differs only in case from object "OAMADDR" in the same scope
+Warning (10268): Verilog HDL information at CPU.sv(315): always construct contains both blocking and non-blocking assignments
+Info (10281): Verilog HDL Declaration information at CPU.sv(7): object "WE" differs only in case from object "we" in the same scope
+Info (10281): Verilog HDL Declaration information at CPU.sv(4): object "Data_out" differs only in case from object "data_out" in the same scope
+Info (10281): Verilog HDL Declaration information at CPU.sv(1): object "IRQ" differs only in case from object "irq" in the same scope
+Info (10281): Verilog HDL Declaration information at CPU.sv(147): object "ubmux" differs only in case from object "UBMUX" in the same scope
+Info (10281): Verilog HDL Declaration information at CPU.sv(56): object "SEI" differs only in case from object "sei" in the same scope
+Info (10281): Verilog HDL Declaration information at CPU.sv(56): object "SEC" differs only in case from object "sec" in the same scope
+Info (10281): Verilog HDL Declaration information at CPU.sv(56): object "CLI" differs only in case from object "cli" in the same scope
+Info (10281): Verilog HDL Declaration information at CPU.sv(56): object "CLC" differs only in case from object "clc" in the same scope
+Info (10281): Verilog HDL Declaration information at CPU.sv(56): object "CLV" differs only in case from object "clv" in the same scope
+Info (10281): Verilog HDL Declaration information at CPU.sv(250): object "strobe" differs only in case from object "Strobe" in the same scope
+Info (10281): Verilog HDL Declaration information at addr_decoder.sv(5): object "we" differs only in case from object "WE" in the same scope
+Info (10281): Verilog HDL Declaration information at addr_decoder.sv(5): object "Load4016" differs only in case from object "load4016" in the same scope
+Info (10281): Verilog HDL Declaration information at addr_decoder.sv(5): object "Read4016" differs only in case from object "read4016" in the same scope
+Info (10281): Verilog HDL Declaration information at Computation_Unit.sv(1): object "C_flag" differs only in case from object "c_flag" in the same scope
+Info (10281): Verilog HDL Declaration information at nmi_flipflop.sv(7): object "Q" differs only in case from object "q" in the same scope
+Info (10281): Verilog HDL Declaration information at PPU_addr_decoder.sv(4): object "vram_true" differs only in case from object "VRAM_True" in the same scope
+Info (10281): Verilog HDL Declaration information at fine_x.sv(3): object "Count" differs only in case from object "count" in the same scope
+Info (10281): Verilog HDL Declaration information at PaletteSelect.sv(3): object "Latches" differs only in case from object "latches" in the same scope
+Info (10281): Verilog HDL Declaration information at tile_prioritizer.sv(8): object "BGselect" differs only in case from object "bgselect" in the same scope
+Warning (10268): Verilog HDL information at PPURender.sv(86): always construct contains both blocking and non-blocking assignments
+Info (10281): Verilog HDL Declaration information at PPURender.sv(7): object "YRegLoad" differs only in case from object "Yregload" in the same scope
+Warning (10268): Verilog HDL information at PPU.sv(135): always construct contains both blocking and non-blocking assignments
+Info (10281): Verilog HDL Declaration information at PPU.sv(4): object "Palette_RAM_data" differs only in case from object "palette_ram_data" in the same scope
+Info (10281): Verilog HDL Declaration information at PPU.sv(5): object "VBLANK_set" differs only in case from object "vblank_set" in the same scope
+Info (10281): Verilog HDL Declaration information at PPU.sv(5): object "VBLANK_clear" differs only in case from object "vblank_clear" in the same scope
+Info (10281): Verilog HDL Declaration information at PPU.sv(10): object "we_cpu" differs only in case from object "WE_CPU" in the same scope
+Info (10281): Verilog HDL Declaration information at PPU.sv(5): object "HS" differs only in case from object "hs" in the same scope
+Info (10281): Verilog HDL Declaration information at PPU.sv(5): object "VS" differs only in case from object "vs" in the same scope
+Info (10281): Verilog HDL Declaration information at PPU.sv(8): object "h_blank" differs only in case from object "H_Blank" in the same scope
+Info (10281): Verilog HDL Declaration information at t_reg.sv(4): object "Data_Out" differs only in case from object "data_out" in the same scope
+Info (10281): Verilog HDL Declaration information at v_reg.sv(3): object "Data_Out" differs only in case from object "data_out" in the same scope

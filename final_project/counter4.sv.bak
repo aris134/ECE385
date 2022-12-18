@@ -1,0 +1,10 @@
+module counter4 (input Clk, Reset, Increment, Decrement,
+					  output [4:0] Data_out);
+					  
+logic [4:0] count;
+assign Data_out = count;
+
+always_ff @ (posedge Clk)
+begin
+if (Reset)
+	

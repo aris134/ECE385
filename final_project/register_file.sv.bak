@@ -1,0 +1,45 @@
+module IO_register_file (input Clk, Reset, Load,
+								 input [15:0] Address,
+								 input [7:0] Data_in,
+								 output [7:0] Data_out);
+
+logic load_wire_PPU, load_wire_APU;
+logic [7:0] Data_out_PPU, Data_out_APU;
+logic PPU_Load0, PPU_Load1, PPU_Load2, PPU_Load3, PPU_Load4, PPU_Load5, PPU_Load6, PPU_Load7;
+logic [7:0] PPU_Din0, PPU_Din1, PPU_Din2, PPU_Din3, PPU_Din4, PPU_Din5, PPU_Din6, PPU_Din7;
+
+always_comb
+begin
+if (Address < 16'h4000)
+begin
+	load_wire_PPU = Load;
+	Data_out = Data_out_PPU;
+end
+else
+begin
+	load_wire_APU = Load;
+	Data_out = Data_out_APU;
+end
+end
+
+// PPU decoder
+decoder8 PPUDecoder(.Din(load_wire_PPU), .select(Address[2:0]),
+						  .Dout0(PPU_Load0), .Dout1(PPU_Load1), .Dout2(PPU_Load2), .Dout3(PPU_Load3),
+						  .Dout4(PPU_Load4), .Dout5(PPU_Load5), .Dout6(PPU_Load6), .Dout7(PPU_Load7));
+						  
+// PPU mux
+mux8 PPUMux(.Din0(PPU_Din0), .Din1(PPU_Din1), .Din1(PPU_Din1), .Din1(PPU_Din1),
+				.Din1(PPU_Din1), .Din1(PPU_Din1), .Din1(PPU_Din1), .Din1(PPU_Din1),
+				.select(Address[2:0]), .Dout(Data_out_PPU));
+
+// PPU registers
+reg8 PPU0(.*, Load(PPU_Load0), .Data_In(Data_in), .Data_out(PPU_Din0));
+reg8 PPU1(.*, Load(PPU_Load1), .Data_In(Data_in), .Data_out(PPU_Din1));
+reg8 PPU2(.*, Load(PPU_Load2), .Data_In(Data_in), .Data_out(PPU_Din2));
+reg8 PPU3(.*, Load(PPU_Load3), .Data_In(Data_in), .Data_out(PPU_Din3));
+reg8 PPU4(.*, Load(PPU_Load4), .Data_In(Data_in), .Data_out(PPU_Din4));
+reg8 PPU5(.*, Load(PPU_Load5), .Data_In(Data_in), .Data_out(PPU_Din5));
+reg8 PPU6(.*, Load(PPU_Load6), .Data_In(Data_in), .Data_out(PPU_Din6));
+reg8 PPU7(.*, Load(PPU_Load7), .Data_In(Data_in), .Data_out(PPU_Din7));
+
+endmodule

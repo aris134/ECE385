@@ -1,0 +1,13 @@
+module Ricoh_2C02(input Clk, Reset,
+						input [7:0] PPUCTRL,PPUMASK,PPUSTATUS,OAMADDR,OAMDATA,PPUSCROLL,PPUADDR,PPUDATA);
+
+// logic wires
+logic write_oam,write_soam,h_blank,ld_soam_ptr;
+logic [4:0] soam_addr,soam_ptr_out;
+logic [7:0] oam_out,soam_out;
+
+// modules
+OAM PrimaryOAM(.Clk(Clk),.address(OAMADDR),.WE(write_oam),.data_in(OAMDATA),.read_data(oam_out));
+SecondaryOAM OAMBuffer(.Clk(Clk),.address(soam_addr),.WE(write_soam).data_in(oam_out),.read_data(soam_out));
+reg5 SOAMpointer(.Clk(Clk),.Reset(Reset | h_blank),.Load(ld_soam_ptr),.Data_In(soam_ptr_out + 1'b1),.Data_Out(soam_ptr_out));
+						

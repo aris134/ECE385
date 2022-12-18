@@ -1,0 +1,20 @@
+module addr_decoder (input [15:0] address.
+							output [15:0] address_out);
+							
+logic [15:0] address_wire;
+assign address_out = address_wire;
+
+if (address[15:0] < 16'h2000)
+address_wire[15:0] = address;
+
+else if (address[15:0] >= 16h'2000 && address[15:0] < 16h'4020)
+address_wire[15:0] = address[15:0] - 16'h2000;
+
+else if (address[15:0] >= 16h'4020 && address[15:0] < 16'h6000)
+address_wire[15:0] = address[15:0] - 16'h4020;
+
+else if (address[15:0] >= 16h'6000 && address[15:0] < 16'h8000)
+address_wire[15:0] = address[15:0] - 16'h6000;
+
+else if (address[15:0] >= 16'h8000 && address[15:0] <= 16'h10000)
+address_wire[15:0] = address[15:0] - 16h'8000; 

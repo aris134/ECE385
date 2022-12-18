@@ -1,0 +1,19 @@
+module shiftin_reg8 (input  logic Clk, Reset, Load, Shift_Enable,
+              input  logic [7:0]  Data_In,
+              output logic  Data_Out);
+
+logic [7:0] data;
+    always_ff @ (posedge Clk)	
+    begin
+	 	 if (Reset)
+			  data <= 8'h00;	
+		 else if (Load)
+			  data <= Data_In;
+		 if (Shift_Enable)
+		 begin
+			  Data_Out <= data[7];
+			  data <= {data[6:0], 1'b0};
+		 end
+    end
+
+endmodule

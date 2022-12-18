@@ -1,0 +1,28 @@
+module tile_decrementor8 (input Clk, Reset, Load, Start,
+							input [7:0] Data_In,
+							input [9:0] dot,
+							output Shift_Signal);
+							
+logic [7:0] count;
+logic signal;
+assign Shift_Signal = signal;
+
+always_ff @ (posedge Clk or posedge Reset)
+begin
+if (Reset)
+	count <= 8'h00;
+else if (Load)
+	count <= Data_In;
+else if (Start)
+	count <= count - 1'b1;
+end
+
+always_comb
+begin
+if ((count == 8'h00 || count >= 8'hF9) && dot > 10'd9)
+	signal = 1'b1;
+else
+	signal = 1'b0;
+end
+
+endmodule

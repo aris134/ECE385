@@ -1,0 +1,71 @@
+
+State Machine - |nes|PPU:Ricoh_2C02|State
+Name State.WaitVGAV State.WaitVGAH2 State.WaitVGAH1 State.Pre_R_NoRender State.Vertical_Copy State.Pre_R_HBLANK State.Clear_VBLANK State.VBLANK State.Set_VBLANK State.Pre_VBLANK State.Post_Render State.BNL10 State.BNL9 State.BNL8 State.BNL7 State.BNL6 State.BNL5 State.BNL4 State.BNL3 State.BNL2 State.BNL1 State.BNL0 State.H_Blank State.BGR7 State.BGR6 State.BGR5 State.BGR4 State.BGR3 State.BGR2 State.BGR1 State.Scanline_Read State.Clear 
+State.Clear 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+State.Scanline_Read 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+State.BGR1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+State.BGR2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+State.BGR3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+State.BGR4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+State.BGR5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+State.BGR6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+State.BGR7 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+State.H_Blank 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+State.BNL0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+State.BNL1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+State.BNL2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+State.BNL3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.BNL4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.BNL5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.BNL6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.BNL7 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.BNL8 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.BNL9 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.BNL10 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.Post_Render 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.Pre_VBLANK 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.Set_VBLANK 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.VBLANK 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.Clear_VBLANK 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.Pre_R_HBLANK 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.Vertical_Copy 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.Pre_R_NoRender 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.WaitVGAH1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.WaitVGAH2 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.WaitVGAV 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |nes|PPU:Ricoh_2C02|PPURender:RenderingUnit|State
+Name State.SOAMClear State.XFetch State.AttrFetch State.TileFetch2 State.TileFetch1 State.FetchWait State.Check State.Write3 State.Write2 State.Write1 State.Eval State.InitPtr State.Init1 State.Init0 State.Wait 
+State.Wait 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+State.Init0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+State.Init1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+State.InitPtr 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+State.Eval 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+State.Write1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+State.Write2 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+State.Write3 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+State.Check 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+State.FetchWait 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+State.TileFetch1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+State.TileFetch2 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+State.AttrFetch 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+State.XFetch 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.SOAMClear 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |nes|IO_register_file:IOreg|State
+Name State.Count6 State.Count5 State.Count4 State.Count3 State.Count2 State.Count1 State.Wait 
+State.Wait 0 0 0 0 0 0 0 
+State.Count1 0 0 0 0 0 1 1 
+State.Count2 0 0 0 0 1 0 1 
+State.Count3 0 0 0 1 0 0 1 
+State.Count4 0 0 1 0 0 0 1 
+State.Count5 0 1 0 0 0 0 1 
+State.Count6 1 0 0 0 0 0 1 
+
+State Machine - |nes|IO_register_file:IOreg|VINC_State
+Name VINC_State.VINCWait4 VINC_State.VINCWait3 VINC_State.VINCWait2 VINC_State.VINCWait VINC_State.Assert 
+VINC_State.VINCWait 0 0 0 0 0 
+VINC_State.VINCWait2 0 0 1 1 0 
+VINC_State.VINCWait3 0 1 0 1 0 
+VINC_State.VINCWait4 1 0 0 1 0 
+VINC_State.Assert 0 0 0 1 1 

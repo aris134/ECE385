@@ -1,0 +1,17 @@
+module counter3 (input Clk, Reset, Increment,
+					  output [2:0] Data_out);
+					  
+logic [2:0] count;
+assign Data_out = count;
+
+always_ff @ (posedge Clk)
+begin
+if (Reset)
+	count <= 4'b0000;
+else if (Increment)
+	count <= count + 1'b1;
+else if (Decrement)
+	count <= count - 1'b1;
+end
+
+endmodule

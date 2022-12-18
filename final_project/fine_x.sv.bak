@@ -1,0 +1,14 @@
+module fine_x (input Clk, Reset, Start,
+					output [2:0] Count);
+					
+logic [2:0] count;
+assign Count = count;
+
+always_ff @ (posedge Clk)
+begin
+if (Reset)
+	count <= 3'b000;
+else if (Start)
+	count <= count + 1'b1;
+end
+					

@@ -1,0 +1,26 @@
+module edge_detector(
+		input 	NMI,
+		input 	Clk,
+		input 	Reset,
+		output	NMI_assert);
+ 
+logic q1, q2;
+logic 
+
+// first flip flop
+always_ff @ (posedge Clk)
+begin
+if (Reset)
+q1 <= 1'b1;
+else
+q1 <= NMI;
+end 
+
+always_ff @ (posedge Clk)
+begin
+if (Reset)
+q2 <= 1'b1;
+else
+q2 <= q1;
+
+endmodule 

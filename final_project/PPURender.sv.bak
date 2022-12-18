@@ -1,0 +1,5 @@
+module PPURender (input Clk, Reset,
+						input [7:0] SOAM, CHR_ROM, AT,
+						output [4:0] Pixel_address,
+						output Zero_hit)
+						

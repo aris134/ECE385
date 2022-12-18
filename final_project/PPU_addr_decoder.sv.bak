@@ -1,0 +1,35 @@
+module PPU_addr_decoder (input [15:0] address,
+							output [15:0] address_out,
+							output bus_select);
+							
+logic [15:0] address_wire;
+assign address_out = address_wire;
+
+logic bus;
+assign bus_select = bus;
+
+always_comb
+begin
+bus = 1'b0;
+if (address[15:0] < 16'h2000)
+begin
+address_wire = address;
+bus = 1'b1;
+end
+
+else if (address[15:0] >= 16'h2000 && address[15:0] < 16'h4020)
+address_wire = address; 
+
+else if (address[15:0] >= 16'h4020 && address[15:0] < 16'h6000)
+address_wire = address - 16'h4020;
+
+else if (address[15:0] >= 16'h6000 && address[15:0] < 16'h8000)
+address_wire = address - 16'h6000;
+
+else
+begin
+address_wire = address - 16'h8000;
+bus = 1'b0;
+end
+end
+endmodule 

@@ -1,0 +1,17 @@
+module reg2003 (input  logic Clk, Reset, Load, Load2004,
+              input  logic [7:0]  Data_In,	
+              output logic [7:0]  Data_Out);	
+
+logic [7:0] data;
+assign Data_Out = data;
+    always_ff @ (posedge Clk)	
+    begin
+	 	 if (Reset)
+			  data <= 8'h00;	
+		 else if (Load)
+			  data <= Data_In;	
+		 if (Load2004)
+			  data <= Data
+    end
+
+endmodule

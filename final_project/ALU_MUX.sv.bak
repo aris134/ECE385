@@ -1,0 +1,30 @@
+module mux11 (input [7:0] ORA, [7:0] AND, [7:0] EOR, [7:0] ADC, [7:0] SBC, 
+				 [7:0] DEC, [7:0] DECX, [7:0] DECY, [7:0] INC, [7:0] INX, [7:0] INY, [7:0] LSR,
+				 [7:0] ROL, [7:0] ROR,
+				 input [3:0] select,
+				 output Dout);
+				 
+logic [7:0] Dout_wire;
+assign Dout = Dout_wire;
+always @ (Din0 or Din1 or Din2 or Din3 or Din4 or
+Din5 or Din6 or Din7 or select)		// inputs to mux
+begin
+	case(select)								// select truth table
+	4'b0000		:Dout_wire = ORA; 
+	4'b0001		:Dout_wire = AND;
+	4'b0010		:Dout_wire = EOR;
+	4'b0011		:Dout_wire = ADC;
+	4'b0100		:Dout_wire = SBC;
+	4'b0101		:Dout_wire = DEC;
+	4'b0110		:Dout_wire = DECX;
+	4'b0111		:Dout_wire = DECY;
+	4'b1000		:Dout_wire = INC;
+	4'b1001		:Dout_wire = INX;
+	4'b1010		:Dout_wire = INY;
+	4'b1011		:Dout_wire = LSR;
+	4'b1100		:Dout_wire = ROL;
+	4'b1101		:Dout_wire = ROR;
+	default  	:Dout_wire = 2'h00; 
+	endcase
+end
+endmodule 

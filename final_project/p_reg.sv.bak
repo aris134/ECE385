@@ -1,0 +1,13 @@
+module p_reg (input logic Clk, Reset, SEC, SEI, CLC, CLI, CLV, LoadN, LoadV, LoadZ, BRK,
+              input  logic [7:0]  Data_In,	
+              output logic [7:0]  Data_Out);	
+
+    always_ff @ (posedge Clk)	
+    begin
+	 	 if (Reset)
+			  Data_Out <= 8'h00;	
+		 else if (Load)
+			  Data_Out <= Data_In;		
+    end
+
+endmodule

@@ -1,0 +1,16 @@
+module cpuclk (input  logic Clk, Reset,
+              output logic Shift_out);
+
+logic [9:0] data;
+assign Shift_out = data[0];
+    always_ff @ (posedge Clk)	
+    begin
+	 	 if (Reset)
+			  data <= 10'h200;
+		 else if (data[1])
+			  data <= 10'h201;
+		 else
+			  data <= {1'b0,data[9:1]};
+    end
+
+endmodule

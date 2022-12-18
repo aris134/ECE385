@@ -1,0 +1,4 @@
+module decrementor8 (input Clk, Reset, Load, Start,
+							input [7:0] Data_In,
+							output [7:0] Data_Out,
+							output ShiftSignal);

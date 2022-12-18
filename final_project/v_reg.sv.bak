@@ -1,0 +1,26 @@
+module v_reg (input  Clk, Reset, Load2005, Load2006, WT,
+				  input 	[1:0]	  PPUCTRL_2,
+				  input 	[7:0]	  PPUSCROLL,PPUADDR,
+              output [14:0]  Data_Out);	
+
+    always_ff @ (posedge Clk)	
+    begin
+	 	 if (Reset)
+			  Data_Out <= 15'h0000;	// for clearing PC when RESET is pressed
+		 else if ((WT == 1'b0) && (Load2005 == 1'b1))
+			  Data_Out[4:0] <= PPUSCROLL[4:0];
+		 else if ((WT == 1'b1) && (Load2005 == 1'b1))
+		 begin
+			  Data_Out[14:12] <= PPUSCROLL[2:0];
+			  Data_Out[9:5] <= PPUSCROLL[7:3];
+		 end
+		 else if ((WT == 1'b0) && (Load2006 == 1'b1))
+		 begin
+			  Data_Out[13:8] <= PPUADDR[5:0];
+			  Data_Out[14] <= 1'b0;
+		 end
+		 else if ((WT == 1'b1) && (Load2006 == 1'b1))
+			  Data_Out[7:0] <= PPUADDR;
+    end
+
+endmodule

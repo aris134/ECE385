@@ -1,0 +1,17 @@
+module shiftin_reg8 (input  logic Clk, Reset,
+              input  logic Shift_In,
+              output logic [9:0] Data_Out);
+
+logic [7:0] data;
+assign Data_Out = data;
+    always_ff @ (posedge Clk)	
+    begin
+	 	 if (Reset)
+			  data <= 10'h200;
+		 else if (data[1])
+			  data <= 10'h201;
+		 else
+			  data <= {1'b0,data[8:0]};
+    end
+
+endmodule

@@ -1,0 +1,3 @@
+module ALU(input [3:0] ALUK, [7:0] Accumulator, [7:0] X, [7:0] Y, C_flag, [7:0] databus,
+			  output [7:0] result);
+
